@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.button-container {
+    background-color: rgb(151, 151, 151);
+    position: relative;
+}
+
+.animated-button {
+    background-color: rgba(211, 211, 211, 0); /* Цвет фона кнопки */
+    color: black; /* Цвет текста */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2; /* Обеспечиваем, чтобы текст кнопки был над красным квадратом */
+    cursor: pointer;
+}
+
+.red-box {
+    background-color: lightcoral; /* Цвет красного квадрата */
+    height: 0; /* Начальное состояние с нулевой высотой */
+    width: calc(100% - 10px); /* Ширина немного меньше кнопки */
+    position: absolute;
+    top: 0; /* Размещаем квадрат в верхней части кнопки */
+    left: 5px; /* Центрируем относительно кнопки */
+    transition: height 0.3s ease, top 0.3s ease; /* Плавный переход */
+    z-index: 1; /* Позиционируем под кнопкой */
+}

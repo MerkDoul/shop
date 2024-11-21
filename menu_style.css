@@ -1,0 +1,35 @@
+/* Пример стилей для header.html */
+header {
+    background-color: #333; /* Цвет фона */
+    color: white; /* Цвет текста */
+    padding: 10px 0; /* Отступы */
+    text-align: center; /* Центрирование текста */
+}
+
+header h1 {
+    margin: 0; /* Убираем отступы у заголовка */
+}
+
+header nav {
+    margin-top: 10px; /* Отступ сверху для навигации */
+}
+
+header nav ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline; /* Выводим элементы списка в строку */
+    margin-right: 20px; /* Отступы между элементами */
+}
+
+header nav ul li a {
+    color: white; /* Цвет текста ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+header nav ul li a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}

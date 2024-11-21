@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота экрана */
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.menu-container {
+    
+    display: flex; /* Используем Flexbox для горизонтального расположения */
+    gap: 10px; /* Пробел между кнопками */
+}
+
+.button-container {
+    background-color: lightgray;
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.animated-button {
+    background-color: rgba(211, 211, 211, 0); /* Цвет фона кнопки */
+    color: black; /* Цвет текста */
+    border: none;
+    padding: 0; /* Убираем отступы для центрирования текста */
+    font-size: 16px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    width: 100%; /* Если кнопка занимает всю ширину контейнера */
+    height: 60px; /* Задайте фиксированную высоту */
+    line-height: 60px; /* Центрируем текст по вертикали */
+    text-align: center; /* Центрируем текст по горизонтали */
+}
+
+.red-box {
+    background-image:  url('img/icons/pat1.png'); 
+    background-size: 64px; /* Заполняем всю область, сохраняя пропорции */
+    background-position: bottom; 
+    background-color: lightcoral; /* Цвет по умолчанию */
+    height: 0; /* Начальное состояние с нулевой высотой */
+    width: 80%; /* Ширина шторки равна ширине кнопки */
+    position: absolute;
+    top: 0; /* Размещаем шторку в верхней части кнопки */
+    left: 10%; /* Центрируем относительно кнопки */
+    transition: height 0.5s ease; /* Плавный переход */
+    z-index: 0; /* Позиционируем под кнопкой */
+}
+
+.border {
+    height: 64px;
+    background-image: url('img/icons/border1.png');
+    background-size: 64px;
+    background-position: top left;
+    width: 100%; /* Ширина равна ширине шторки */
+    position: absolute; /* Позиция относительно красного бокса */
+    bottom: 0%; /* Привязываем к нижнему краю красного бокса */
+    margin-bottom: -64px;
+}

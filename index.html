@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переключение секций</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="menu-container" id="menuContainer">
+        <!-- Кнопки меню будут добавлены сюда с помощью JavaScript -->
+    </div>    
+    <script src="menu.js"></script> <!-- Файл с настройками меню -->
+    <script>
+        const buttonConfigs = [
+            { text: "Главная", slideHeight: "70px", width: "128px", link: "index.html" },
+            { text: "Магазин", slideHeight: "80px", width: "256px", link: "catalog.html" },
+            { text: "DIY", slideHeight: "65px", width: "256px", link: "index.html" },
+            { text: "О нас", slideHeight: "75px", width: "384px", link: "index.html" },
+        ];
+
+        buttonConfigs.forEach(config => {
+            new AnimatedButton(config.text, config.slideHeight, config.width, config.link, "menuContainer");
+        });
+    </script>
+
+    <div class="menu-sections">
+        <button class="nav-button" onclick="scrollToSection(currentIndex - 1)">↑</button>
+        <div class="indicators">
+            <div class="indicator" data-index="0" onclick="scrollToSection(0)"></div>
+            <div class="indicator" data-index="1" onclick="scrollToSection(1)"></div>
+            <div class="indicator" data-index="2" onclick="scrollToSection(2)"></div>
+        </div>
+        <button class="nav-button" onclick="scrollToSection(currentIndex + 1)">↓</button>
+    </div>
+
+    <div class="section section1">
+        <h1>Секция 1</h1>
+        <button onclick="window.location.href='catalog.html'">Catalog</button>
+    </div>
+    <div class="section section2">
+        <h1>Секция 2</h1>
+    </div>
+    <div class="section section3">
+        <h1>Секция 3</h1>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

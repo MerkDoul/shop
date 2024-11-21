@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Горизонтальное меню с кнопками</title>
+    <link rel="stylesheet" href="menu.css"> <!-- Обновите на ваш файл стилей -->
+</head>
+<body>
+    <div class="menu-container" id="menuContainer">
+        <!-- Кнопки меню будут добавлены сюда с помощью JavaScript -->
+    </div>
+    <script src="button.js"></script> <!-- Ваш файл с классами AnimatedButton -->
+    <script src="menu.js"></script> <!-- Файл с настройками меню -->
+    <script>
+        const buttonConfigs = [
+            { text: "Главная", slideHeight: "70px", width: "128px" },
+            { text: "Магазин", slideHeight: "80px", width: "256px" },
+            { text: "DIY", slideHeight: "65px", width: "256px" },
+            { text: "О нас", slideHeight: "75px", width: "384px" },
+        ];
+
+        buttonConfigs.forEach(config => {
+            new AnimatedButton(config.text, config.slideHeight, config.width, "menuContainer");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог продуктов</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu-container" id="menuContainer">
+        <!-- Кнопки меню будут добавлены сюда с помощью JavaScript -->
+    </div>    
+    <script src="menu.js"></script> <!-- Файл с настройками меню -->
+    <script>
+        const buttonConfigs = [
+            { text: "Главная", slideHeight: "70px", width: "128px", link: "index.html" },
+            { text: "Магазин", slideHeight: "80px", width: "256px", link: "catalog.html" },
+            { text: "DIY", slideHeight: "65px", width: "256px", link: "index.html" },
+            { text: "О нас", slideHeight: "75px", width: "384px", link: "index.html" },
+        ];
+
+        buttonConfigs.forEach(config => {
+            new AnimatedButton(config.text, config.slideHeight, config.width, config.link, "menuContainer");
+        });
+    </script>
+
+
+    <div class="container">        
+        <div class="product-list"></div> <!-- Контейнер для динамически добавляемых продуктов -->
+    </div>
+
+    <script src="product.js"></script>
+    <script src="catalog.js"></script>
+</body>
+</html>
